@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "content"
+version = "0.1.0"
+description = ""
+authors = ["'Myxogastria0808' <r.rstudio.c@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+poethepoet = "^0.24.3"
+fastapi = "^0.104.1"
+uvicorn = "^0.24.0.post1"
+gunicorn = "^21.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poe.tasks]
+dev = "uvicorn api:app --reload"
+start = "nohup gunicorn api:app --workers 4 --worker-class uvicorn.workers.UvicornWorker --bind 127.0.0.1:8000 &"
