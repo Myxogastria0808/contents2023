@@ -4,7 +4,7 @@ import json
 
 
 #設定
-POST_TIMES=40
+POST_TIMES=43
 client = tweepy.Client(
     consumer_key=settings.CONSUMER_KEY,
     consumer_secret=settings.CONSUMER_SECRET,
@@ -64,6 +64,24 @@ def post_tweet(post_times):
                     indent=4,
                     ensure_ascii=False
                 )
+        elif i==41:
+            tweet = json.dumps(
+                    _tweet_content(id=i, tag='#コンテンツ入門2023', title='逆張り精神で post するコード作った', content='https://github.com/Myxogastria0808/contents2023'),
+                    indent=4,
+                    ensure_ascii=False
+                )
+        elif i==42:
+            tweet = json.dumps(
+                    _tweet_content(id=i, tag='#コンテンツ入門2023', title='finish! ついでにAPI立てた', content='https://content2023.yukiosada.work'),
+                    indent=4,
+                    ensure_ascii=False
+                )
+        elif i==43:
+            tweet = json.dumps(
+                    _tweet_content(id=i, tag='#コンテンツ入門2023', title='呼んでほしい講師', content='人じゃないけど、柴犬とかが講師だと嬉しい'),
+                    indent=4,
+                    ensure_ascii=False
+                )
         else:
             content=f'にょき×{i}'
             tweet = json.dumps(
@@ -92,6 +110,12 @@ def wright_json(post_times):
             tweet = _tweet_content(id=i, tag='#コンテンツ入門2023', title='にょき', content='残り10tweet!')
         elif i==40:
             tweet = _tweet_content(id=i, tag='#コンテンツ入門2023', title='にょき', content='40tweetは草')
+        elif i==41:
+            tweet = _tweet_content(id=i, tag='#コンテンツ入門2023', title='逆張り精神で post するコード作った', content='https://github.com/Myxogastria0808/contents2023')
+        elif i==42:
+            tweet = _tweet_content(id=i, tag='#コンテンツ入門2023', title='finish! ついでにAPI立てた', content='https://content2023.yukiosada.work')
+        elif i==43:
+            tweet = _tweet_content(id=i, tag='#コンテンツ入門2023', title='呼んでほしい講師', content='人じゃないけど、柴犬とかが講師だと嬉しい')
         else:
             content=f'にょき×{i}'
             tweet = _tweet_content(id=i, tag='#コンテンツ入門2023', title='にょき', content=content)
