@@ -137,5 +137,5 @@ async def halloween():
 
 今回、FastAPIを用いて作成したAPIのスクリプトは、Azureで走らせている。筑波大学のAzure無償提供という寛大さに手を合わせつつ、App Serviceを利用してホストしている。
 
-<figure><img src=".gitbook/assets/azure.png" alt=""><figcaption><p>Azureのの画面</p></figcaption></figure>
+<figure><img src=".gitbook/assets/azure.png" alt=""><figcaption><p>Azureの画面</p></figcaption></figure>
 
