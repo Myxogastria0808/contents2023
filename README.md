@@ -18,7 +18,7 @@ TwitterのAPI規制が行われる以前は、特定ハッシュタグの埋め�
 
 ### 弓矢レベルの有効手段はいくつか存在する
 
-PyAutoGUIを用いて、検索までをpythonに自動化させ、検索結果ページのhtmlのタグを取得することで可能だが、面倒くさい。また、twitter-api-clientを用いると、Proアカウントのユーザー情報のみであれば取得することができる。(twitter-api-clientは、おそらく一部でスクレイピングを行っているため、弓矢レベルでもないかもしれない。)
+PyAutoGUIを用いて、検索までをpythonに自動化させ、検索結果ページのhtmlのタグを取得することで可能だが、面倒くさい。また、twitter-api-clientを用いると、Proアカウントのユーザー情報のみであれば取得することができる(ProアカウントのPostであっても、すべてを取得するのは不可能である可能性がある)。(twitter-api-clientは、おそらく一部でスクレイピングを行っているため、弓矢レベルでもないかもしれない。)
 
 ちなみに、twitter-api-clientでデータを取得するコードは、以下のような感じ
 
@@ -137,5 +137,4 @@ async def halloween():
 
 今回、FastAPIを用いて作成したAPIのスクリプトは、Azureで走らせている。筑波大学のAzure無償提供という寛大さに手を合わせつつ、App Serviceを利用してホストしている。
 
-<figure><img src=".gitbook/assets/azure.png" alt=""><figcaption><p>Azureの画面</p></figcaption></figure>
-
+<figure><img src=".gitbook/assets/画像1.png" alt=""><figcaption><p>Azureのの画面</p></figcaption></figure>
